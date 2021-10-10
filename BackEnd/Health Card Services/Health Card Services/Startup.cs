@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Builder.Extensions;
+using Microsoft.AspNetCore.Identity;
 
 namespace Health_Card_Services
 {
@@ -43,6 +45,15 @@ namespace Health_Card_Services
             services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<AuthenticationContext>();
 
             services.AddCors();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 5;
+            });
 
             //Configure JWT Authentication
             var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
@@ -92,9 +103,11 @@ namespace Health_Card_Services
             app.UseAuthorization();
             app.UseAuthentication();
 
+          
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

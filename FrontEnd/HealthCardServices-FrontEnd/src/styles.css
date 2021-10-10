@@ -1,5 +1,5 @@
 body{
-  background-color: #ffc107;;
+  background-color: #d6cbab;;
 }
 
 .container {
@@ -16,7 +16,7 @@ body{
 
 
 input.form-control,input.form-control:focus{
-  background-color: #ffc107;
+  background-color: #a86587;
   color: black;
   border-color: black;
   border-radius: 0px;

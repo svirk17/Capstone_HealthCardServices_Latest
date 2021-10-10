@@ -43,7 +43,7 @@ namespace Health_Card_Services.Controller
                 lastName = model.lastName,
                 address = model.address,
                 dob = model.dob,
-                PhoneNumber = model.phoneNumber,
+                PhoneNumber = model.phoneNumber, 
                 Email = model.emailAddress,
 
             };

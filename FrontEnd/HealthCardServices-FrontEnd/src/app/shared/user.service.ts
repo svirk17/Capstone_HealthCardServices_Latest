@@ -17,11 +17,11 @@ export class UserService {
     LastName :['', Validators.required],
     Address :['', Validators.required],
     Phone :['', Validators.required],
-    Email :['', Validators.required, Validators.email],
-    DateOfBirth :['', Validators.required],
+    Email :['',[Validators.required, Validators.email]],
+    DateOfBirth :['',Validators.required],
     Passwords : this.fb.group({
-      Password :['', Validators.required, Validators.minLength(6)],
-      ConfirmPassword :['', Validators.required, Validators.minLength(6)]
+      Password :['',[Validators.required, Validators.minLength(6)]],
+      ConfirmPassword :['',[Validators.required, Validators.minLength(6)]]
     }, {validator : this.comparePasswords})
   });
 
@@ -56,6 +56,6 @@ export class UserService {
       Password: this.formModel.value.Passwords.Password
     }
 
-    return this.http.post(this.baseURL + '/ApplicationUser/CreateAccount/', body);
+    return this.http.post(this.baseURL + '/ApplicationUser/Register/', body);
   }
 }

@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SAM\\Desktop\\Capstone\\Source Code\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj": {}
+    "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SAM\\Desktop\\Capstone\\Source Code\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj": {
+    "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAM\\Desktop\\Capstone\\Source Code\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj",
+        "projectUniqueName": "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj",
         "projectName": "Health Card Services",
-        "projectPath": "C:\\Users\\SAM\\Desktop\\Capstone\\Source Code\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj",
-        "packagesPath": "C:\\Users\\SAM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAM\\Desktop\\Capstone\\Source Code\\BackEnd\\Health Card Services\\Health Card Services\\obj\\",
+        "projectPath": "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj",
+        "packagesPath": "C:\\Users\\simvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\simvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
