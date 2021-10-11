@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateNewAccountComponent } from './components/create-new-account/create-new-account.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserHomeComponent } from './components/user-home/user-home.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
 
   { 
     path: 'create-new-account', component: CreateNewAccountComponent,
+    children: [] 
+  },
+
+  { 
+    path: 'home', component: UserHomeComponent,
     children: [] 
   }
 

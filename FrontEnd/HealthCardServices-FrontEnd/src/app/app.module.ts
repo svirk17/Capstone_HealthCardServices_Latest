@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserHomeComponent } from './components/user-home/user-home.component';
 
 
 
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ButtonsComponent,
     LoginComponent,
-    CreateNewAccountComponent,  
+    CreateNewAccountComponent,
+    UserHomeComponent,  
     
   ],
   imports: [
