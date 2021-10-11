@@ -58,4 +58,9 @@ export class UserService {
 
     return this.http.post(this.baseURL + '/ApplicationUser/Register/', body);
   }
+
+  login(formData: any)
+  {
+    return this.http.post(this.baseURL + '/ApplicationUser/Login', formData);
+  }
 }
