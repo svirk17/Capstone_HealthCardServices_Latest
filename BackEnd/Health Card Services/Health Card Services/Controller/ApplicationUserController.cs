@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,5 +90,46 @@ namespace Health_Card_Services.Controller
                 return BadRequest(new { message = "Username or password is incorrect." });
             }
         }
+
+        
+        [HttpPost]
+        [Route("SendEmail")]
+        //POST: /api/ApplicationUser/SendEmail
+        public async Task<IActionResult> SendEmail(LoginModel model)
+        {
+            var user = await _userManager.FindByNameAsync(model.userName);
+            if((user != null) && await _userManager.CheckPasswordAsync(user, model.password))
+            {
+                try
+                {
+                    MailMessage message = new MailMessage();
+                    SmtpClient smtp = new SmtpClient();
+                    message.From = new MailAddress("capstonetestemail5@gmail.com");
+                    message.To.Add(new MailAddress("capstonetestemail5@gmail.com"));
+                    message.Subject = "Test";
+                    message.IsBodyHtml = true; //to make message body as html  
+                    message.Body = "Login successful";
+                    smtp.Port = 587;
+                    smtp.Host = "smtp.gmail.com"; //for gmail host  
+                    smtp.EnableSsl = true;
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Credentials = new NetworkCredential("capstonetestemail5@gmail.com", "pennstate5210");
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtp.Send(message);
+                    return Ok("Email sent successfully");
+
+                }
+                catch (Exception e) {
+                    
+                    return BadRequest(new { message = "Email could not be sent." });
+                }
+                
+           }
+            else
+            {
+                return BadRequest(new { message = "User not found." });
+            }
+        }
+
     }
 }

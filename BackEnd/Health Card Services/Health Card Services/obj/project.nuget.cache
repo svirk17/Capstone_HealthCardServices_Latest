@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HatS6YPWAMbP1DOfDQ3cCSES9o/7TsO/zQsnbuVFNKPsfErmED0aHCva1NJrmOX4K5EGBk0zckkRXQwuaEyTXQ==",
+  "dgSpecHash": "4SM4AonFf1lI/GVXG8Q5pC4M6qG5sJOAXLAPfmCQhOzbNDy9f0kSCHvwG0XECOiubN00lcddcbpCiYNM/ZWYPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\Health Card Services\\Health Card Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\simvi\\.nuget\\packages\\easendmail\\7.7.1.1\\easendmail.7.7.1.1.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.10\\microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

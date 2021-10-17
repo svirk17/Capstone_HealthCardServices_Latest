@@ -31,14 +31,22 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res.token);
         //this.router.navigateByUrl('user');  
         this.successfulLogin = true;   
-        console.log(localStorage);   
+        //Send email to user
+        this.service.SendEmail(form.value).subscribe(
+          (res:any)=>{
+             console.log("Email sent successfully");
+           },
+           err => {
+             console.log(err);
+           }
+         )
       },
       err => {
         if (err.status == 400)
         this.toastr.error('Incorrect username or password.', 'Authentication Failed');
         else
         console.log(err);
-        this.router.navigateByUrl('user'); 
+        //this.router.navigateByUrl('user'); 
       }
     )
   }

@@ -64,4 +64,10 @@ export class UserService {
     return this.http.post(this.baseURL + '/ApplicationUser/Login', formData);
     console.log(formData);
   }
+
+  SendEmail(formData: any)
+  {
+    return this.http.post(this.baseURL + '/ApplicationUser/SendEmail', formData);
+    console.log(formData);
+  }
 }

@@ -312,3 +312,4 @@ C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackE
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\Health Card Services\obj\Debug\net5.0\Health Card Services.Views.pdb
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\Health Card Services\obj\Debug\net5.0\Health Card Services.csproj.CopyComplete
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\Health Card Services\obj\Debug\net5.0\Health Card Services.genruntimeconfig.cache
+C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\Health Card Services\bin\Debug\net5.0\EASendMail.dll
