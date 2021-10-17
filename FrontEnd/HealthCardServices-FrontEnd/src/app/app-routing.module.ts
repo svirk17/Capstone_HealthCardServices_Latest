@@ -6,9 +6,9 @@ import { LoginComponent } from './components/login/login.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 
 const routes: Routes = [
-  {
-      path: '', component: HeaderComponent, pathMatch: 'full'
-  },
+ // {
+  //    path: '', component: HeaderComponent, pathMatch: 'full'
+  //},
 
 
   { 
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
 
   { 
-    path: 'home', component: UserHomeComponent,
+    path: 'user', component: UserHomeComponent,
     children: [] 
   }
 

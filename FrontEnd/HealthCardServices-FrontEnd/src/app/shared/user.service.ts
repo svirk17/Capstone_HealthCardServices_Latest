@@ -62,5 +62,6 @@ export class UserService {
   login(formData: any)
   {
     return this.http.post(this.baseURL + '/ApplicationUser/Login', formData);
+    console.log(formData);
   }
 }

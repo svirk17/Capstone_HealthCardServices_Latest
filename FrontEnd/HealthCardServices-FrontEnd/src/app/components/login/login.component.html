@@ -14,10 +14,16 @@
                 
                 <div class="form-row">
                     <div class="form-group col-md-8offset-md-2">
-                        <button type="submit" class="btn btn-lg btn-blk" [disabled]='form.invalid'>Login</button>
+                        <button type="submit" class="btn btn-lg btn-blk" [disabled]='form.invalid' (submit)="OnSubmit(form)">Login</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+</div>
+
+<div *ngIf="successfulLogin">
+    <div class="container">
+        <app-user-home></app-user-home>  
+      </div>
 </div>
