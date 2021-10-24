@@ -3,6 +3,32 @@
     <app-header></app-header>   
   </div>
 
+
+<div *ngIf="LoginButtonVisible">
+    
+    <label>Returning User?</label> <br>
+    <app-buttons text="Login" (btnClick)="toggleLogin()"> </app-buttons>
+</div>
+
+
+<div *ngIf="CreateAccountButtonVisible">
+    
+    <label margin-left="600px" align-self="center">New User?</label> <br>
+    <app-buttons text="Create New Account" (btnClick)="toggleCreateNewAccount()"> </app-buttons>
+</div>
+
+
+<div *ngIf="displayLoginForm">
+ 
+        <app-login></app-login>  
+</div>
+
+
+<div *ngIf="displayCreateForm">
+   
+        <app-create-new-account></app-create-new-account>  
+</div>
+
  
 
 

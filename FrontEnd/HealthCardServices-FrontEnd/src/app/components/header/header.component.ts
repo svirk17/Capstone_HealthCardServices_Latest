@@ -9,24 +9,12 @@ export class HeaderComponent implements OnInit {
 
   title: string = 'Health Card Services';
   constructor() { }
-  displayLogin = false;
-  displayCreateForm = false;
+  
 
   ngOnInit(): void {
   }
 
-  toggleLogin()
-  {
-    console.log('Toggle Login');
-    this.displayLogin = true;
-    this.displayCreateForm = false;
-  }
 
-  toggleCreateNewAccount()
-  {
-    console.log('Toggle Create New Account');
-    this.displayCreateForm = true;
-    this.displayLogin = false;
-  }
+   
 
 }

@@ -9,7 +9,42 @@ export class UserHomeComponent implements OnInit {
 
   constructor() { }
 
+  requestNewHealthCardButtonVisible = true;
+  updateAccountInfoButtonVisible = true;
+  linkAccountButtonVisible = true;
+  previousUserButtonVisible = false;
+  firstTimeUserButtonVisible = false;
+
   ngOnInit(): void {
+  }
+
+  requestNewHealthCard()
+  {
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountButtonVisible = false;
+    this.previousUserButtonVisible = true;
+    this.firstTimeUserButtonVisible = true;
+  }
+
+  updateAccountInfo() 
+  {
+
+  }
+
+  linkAccount()
+  {
+    
+  }
+
+  previousUser()
+  {
+
+  }
+
+  firstTimeUser()
+  {
+    
   }
 
 }

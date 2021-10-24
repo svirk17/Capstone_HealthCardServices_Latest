@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   successfulLogin = false;
+  displayLoginForm = true;
 
   constructor(public service: UserService, private router: Router, private toastr:ToastrService) { }
 
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res.token);
         //this.router.navigateByUrl('user');  
         this.successfulLogin = true;   
+        this.displayLoginForm = false;
         //Send email to user
         this.service.SendEmail(form.value).subscribe(
           (res:any)=>{

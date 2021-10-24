@@ -1,25 +1,8 @@
 <header>
-    <h1> {{title}}</h1>
-
-    <p></p>
-    <app-buttons text="Login" (btnClick)="toggleLogin()"> </app-buttons>
-
-    <p></p>
-    <app-buttons text="Create New Account" (btnClick)="toggleCreateNewAccount()"> </app-buttons>
-        
+    <h1> {{title}}</h1>       
 </header>
 
-<div *ngIf="displayLogin">
-    <div class="container">
-        <app-login></app-login>  
-      </div>
-</div>
 
-<div *ngIf="displayCreateForm">
-    <div class="container">
-        <app-create-new-account></app-create-new-account>  
-      </div>
-</div>
 
 
 

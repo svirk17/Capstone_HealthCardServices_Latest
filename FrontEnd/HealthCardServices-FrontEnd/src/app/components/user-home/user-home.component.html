@@ -1,1 +1,25 @@
-<p>Login successful!</p>
+<h4>Welcome User!</h4>
+
+<h5>How can we help you today?</h5>
+
+<p></p>
+
+<div *ngIf="requestNewHealthCardButtonVisible">    
+    <app-buttons text="I want to request a new health card." (btnClick)="requestNewHealthCard()"> </app-buttons>
+</div>
+
+<div *ngIf="updateAccountInfoButtonVisible">    
+    <app-buttons text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-buttons>
+</div>
+
+<div *ngIf="linkAccountButtonVisible">    
+    <app-buttons text="I want to link to a family member." (btnClick)="linkAccount()"> </app-buttons>
+</div>
+
+<div *ngIf="previousUserButtonVisible">    
+    <app-buttons text="I have had a health card previously." (btnClick)="previousUser()"> </app-buttons>
+</div>
+
+<div *ngIf="firstTimeUserButtonVisible">    
+    <app-buttons text="I am applying for a health card for the first time." (btnClick)="firstTimeUser()"> </app-buttons>
+</div>
