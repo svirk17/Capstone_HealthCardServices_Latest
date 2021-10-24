@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
 
@@ -22,4 +22,16 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should', waitForAsync(() => {
+    spyOn(component, 'OnSubmit');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.OnSubmit).toHaveBeenCalled();
+    });
+  }));
+
 });
