@@ -23,3 +23,7 @@
 <div *ngIf="firstTimeUserButtonVisible">    
     <app-buttons text="I am applying for a health card for the first time." (btnClick)="firstTimeUser()"> </app-buttons>
 </div>
+
+<div *ngIf="firstTimeUserFormVisible">    
+    <app-request-new-card></app-request-new-card>
+</div>

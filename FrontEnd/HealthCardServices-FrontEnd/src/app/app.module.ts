@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserHomeComponent } from './components/user-home/user-home.component';
+import { RequestNewCardComponent } from './components/request-new-card/request-new-card.component';
 
 
 
@@ -24,7 +25,8 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
     ButtonsComponent,
     LoginComponent,
     CreateNewAccountComponent,
-    UserHomeComponent,  
+    UserHomeComponent,
+    RequestNewCardComponent,  
     
   ],
   imports: [

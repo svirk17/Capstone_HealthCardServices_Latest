@@ -14,6 +14,7 @@ export class UserHomeComponent implements OnInit {
   linkAccountButtonVisible = true;
   previousUserButtonVisible = false;
   firstTimeUserButtonVisible = false;
+  firstTimeUserFormVisible = false;
 
   ngOnInit(): void {
   }
@@ -44,7 +45,12 @@ export class UserHomeComponent implements OnInit {
 
   firstTimeUser()
   {
-    
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = true;
   }
 
 }
