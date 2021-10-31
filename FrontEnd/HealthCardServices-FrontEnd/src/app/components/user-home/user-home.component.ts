@@ -98,4 +98,18 @@ export class UserHomeComponent implements OnInit {
     this.updateAccountInfoFormVisible = false;
   }
 
+  back()
+  {
+    this.requestNewHealthCardButtonVisible = true;
+    this.updateAccountInfoButtonVisible = true;
+    this.linkAccountButtonVisible = true;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = true;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+  }
+
 }

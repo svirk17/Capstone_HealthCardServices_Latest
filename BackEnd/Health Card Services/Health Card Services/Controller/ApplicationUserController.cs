@@ -202,17 +202,17 @@ namespace Health_Card_Services.Controller
             {
                 try
                 {
-                    if(userModel.address != "")
+                    if(!string.IsNullOrEmpty(userModel.address))
                     {
                         user.address = userModel.address;
                     }
 
-                    if (userModel.PhoneNumber != "")
+                    if (!string.IsNullOrEmpty(userModel.PhoneNumber))
                     {
                         user.PhoneNumber = userModel.PhoneNumber;
                     }
 
-                    if (userModel.Email != "")
+                    if (!string.IsNullOrEmpty(userModel.Email))
                     {
                         user.Email = userModel.Email;
                     }
