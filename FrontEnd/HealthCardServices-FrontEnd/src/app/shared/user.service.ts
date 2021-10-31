@@ -82,4 +82,11 @@ export class UserService {
     return this.http.post(this.baseURL + '/ApplicationUser/CancelCard', formData);
     console.log(formData);
   }
+
+  updateAccountInfo(formData: any)
+  {
+    console.log(formData);
+    return this.http.post(this.baseURL + '/ApplicationUser/UpdateAccountInfo', formData);
+    
+  }
 }

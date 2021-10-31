@@ -191,5 +191,46 @@ namespace Health_Card_Services.Controller
             }
         }
 
+        [HttpPost]
+        [Route("UpdateAccountInfo")]
+        //POST: /api/ApplicationUser/UpdateAccountInfo
+        public async Task<IActionResult> UpdateAccountInfo(ApplicationUser userModel)
+        {
+            var user = await _userManager.FindByIdAsync((userModel.personalNumber).ToString());
+           
+            if (user != null)
+            {
+                try
+                {
+                    if(userModel.address != "")
+                    {
+                        user.address = userModel.address;
+                    }
+
+                    if (userModel.PhoneNumber != "")
+                    {
+                        user.PhoneNumber = userModel.PhoneNumber;
+                    }
+
+                    if (userModel.Email != "")
+                    {
+                        user.Email = userModel.Email;
+                    }
+
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = userModel.address });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
+            }
+        }
+
     }
 }

@@ -18,6 +18,7 @@ export class UserHomeComponent implements OnInit {
   previousUserFormVisible = false;
   cancelCardButtonVisible = true;
   cancelCardFormVisible = false;
+  updateAccountInfoFormVisible = false;
 
   ngOnInit(): void {
   }
@@ -33,11 +34,21 @@ export class UserHomeComponent implements OnInit {
     this.previousUserFormVisible = false;
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
   }
 
   updateAccountInfo() 
   {
-
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = true;
   }
 
   linkAccount()
@@ -56,6 +67,7 @@ export class UserHomeComponent implements OnInit {
     this.previousUserFormVisible = true;
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
   }
 
   firstTimeUser()
@@ -69,6 +81,7 @@ export class UserHomeComponent implements OnInit {
     this.previousUserFormVisible = false;
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
   }
 
   cancelCard()
@@ -82,6 +95,7 @@ export class UserHomeComponent implements OnInit {
     this.previousUserFormVisible = false;
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = true;
+    this.updateAccountInfoFormVisible = false;
   }
 
 }

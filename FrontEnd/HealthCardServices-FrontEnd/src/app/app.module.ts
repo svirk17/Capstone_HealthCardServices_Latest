@@ -18,6 +18,7 @@ import { RequestNewCardComponent } from './components/request-new-card/request-n
 import { RenewPreviousHealthCardComponent } from './components/renew-previous-health-card/renew-previous-health-card.component';
 
 import { CancelHealthCardComponent } from './components/cancel-health-card/cancel-health-card.component';
+import { UpdateAccountInfoComponent } from './components/update-account-info/update-account-info.component';
 
 
 
@@ -31,7 +32,8 @@ import { CancelHealthCardComponent } from './components/cancel-health-card/cance
     UserHomeComponent,
     RequestNewCardComponent,
     RenewPreviousHealthCardComponent,
-    CancelHealthCardComponent,      
+    CancelHealthCardComponent,
+    UpdateAccountInfoComponent,      
   ],
   imports: [
     BrowserModule,
