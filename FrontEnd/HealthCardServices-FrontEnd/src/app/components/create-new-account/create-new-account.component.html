@@ -1,3 +1,4 @@
+<div *ngIf="showForm">   
 <div class="form-control">
     <div class="row mt-4">
         <div class="col md-6">
@@ -46,7 +47,17 @@
                         <button type="submit" class="btn btn-lg btn-blk" (click)="OnSubmit()">Create Account</button>
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8offset-md-2">
+                        <button type="submit" class="btn btn-lg btn-blk" (click)="Cancel()">Cancel</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
+</div>
+</div>
+
+<div *ngIf="showHeaderPage">    
+    <app-root></app-root>
 </div>

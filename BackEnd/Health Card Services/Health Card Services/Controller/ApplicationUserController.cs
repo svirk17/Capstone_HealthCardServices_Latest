@@ -232,5 +232,42 @@ namespace Health_Card_Services.Controller
             }
         }
 
+        [HttpPost]
+        [Route("FirstRegistration")]
+
+        //POST: /api/ApplicationUser/FirstRegistration
+        public async Task<Object> FirstRegistration(ApplicationUser model)
+        {
+            //creating the variable to generate random health card numbers.
+            Random rnd = new Random();
+
+            var user = await _userManager.FindByIdAsync((model.personalNumber).ToString());
+
+            if (user != null)
+            {
+                try
+                {
+                    user.address = model.address;               
+                    user.PhoneNumber = model.PhoneNumber;                
+                    user.Email = model.Email;
+                    user.valid = true;
+                    user.familyNumber = rnd.Next(1, 999999);
+
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = "Sorry, account couldn't be created." });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
+            }
+            
+        }
+
     }
 }

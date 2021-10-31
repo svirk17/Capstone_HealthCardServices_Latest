@@ -9,6 +9,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CreateNewAccountComponent implements OnInit {
 
+  showForm = true;
+  showHeaderPage = false;
   constructor(public service: UserService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
@@ -28,6 +30,12 @@ export class CreateNewAccountComponent implements OnInit {
         //this.toastr.error('Oops! There was an error');
       }
     )
+  }
+
+  Cancel()
+  {
+    this.showHeaderPage = true;
+    this.showForm = false;
   }
 
 }

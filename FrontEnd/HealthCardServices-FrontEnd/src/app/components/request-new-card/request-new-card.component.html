@@ -1,1 +1,39 @@
-<p>Still under build! This area will contain the form for the request for a new health card.</p>
+<div class="form-control">
+    <div class="row mt-4">
+        <div class="col md-6">
+            <form #form='ngForm' class="mb-4" autocomplete="off" (submit)="OnSubmit(form)">
+                <label> Enter your details below. </label>
+                <div class="form-group" required>
+                    <label> Personal Health Number </label>
+                    <input #personalNumber="ngModel" name="personalNumber" [(ngModel)]="formModel.personalNumber">
+                </div>
+                <div class="form-group" required>
+                    <label> Family Health Number </label>
+                    <input #familyNumber="ngModel" name="familyNumber" [(ngModel)]="formModel.familyNumber">
+                </div>
+                <div class="form-group" required>
+                    <label> Date of Birth </label>
+                    <input #dob="ngModel" name="dob" [(ngModel)]="formModel.dob">
+                </div>
+                <div class="form-group" required>
+                    <label> Address </label>
+                    <input #address="ngModel" name="address" [(ngModel)]="formModel.address">
+                </div>
+                <div class="form-group" required>
+                    <label> Email </label>
+                    <input #Email="ngModel" name="Email" [(ngModel)]="formModel.Email">
+                </div>
+                <div class="form-group" required>
+                    <label> Phone Number </label>
+                    <input #PhoneNumber="ngModel" name="PhoneNumber" [(ngModel)]="formModel.PhoneNumber">
+                </div>                
+                
+                <div class="form-row">
+                    <div class="form-group col-md-8offset-md-2">
+                        <button type="submit" class="btn btn-lg btn-blk" [disabled]='form.invalid' (submit)="OnSubmit(form)">Submit Request</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

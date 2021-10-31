@@ -89,4 +89,11 @@ export class UserService {
     return this.http.post(this.baseURL + '/ApplicationUser/UpdateAccountInfo', formData);
     
   }
+
+  firstRegistration(formData: any)
+  {
+    console.log(formData);
+    return this.http.post(this.baseURL + '/ApplicationUser/FirstRegistration', formData);
+    
+  }
 }
