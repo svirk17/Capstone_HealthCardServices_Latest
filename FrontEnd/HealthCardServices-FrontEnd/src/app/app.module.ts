@@ -15,6 +15,9 @@ import { UserService } from './shared/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { RequestNewCardComponent } from './components/request-new-card/request-new-card.component';
+import { RenewPreviousHealthCardComponent } from './components/renew-previous-health-card/renew-previous-health-card.component';
+
+import { CancelHealthCardComponent } from './components/cancel-health-card/cancel-health-card.component';
 
 
 
@@ -26,8 +29,9 @@ import { RequestNewCardComponent } from './components/request-new-card/request-n
     LoginComponent,
     CreateNewAccountComponent,
     UserHomeComponent,
-    RequestNewCardComponent,  
-    
+    RequestNewCardComponent,
+    RenewPreviousHealthCardComponent,
+    CancelHealthCardComponent,      
   ],
   imports: [
     BrowserModule,

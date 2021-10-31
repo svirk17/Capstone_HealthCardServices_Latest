@@ -27,3 +27,15 @@
 <div *ngIf="firstTimeUserFormVisible">    
     <app-request-new-card></app-request-new-card>
 </div>
+
+<div *ngIf="previousUserFormVisible">    
+    <app-renew-previous-health-card></app-renew-previous-health-card>
+</div>
+
+<div *ngIf="cancelCardButtonVisible">    
+    <app-buttons text="I want to cancel my health card." (btnClick)="cancelCard()"> </app-buttons>
+</div>
+
+<div *ngIf="cancelCardFormVisible">    
+    <app-cancel-health-card></app-cancel-health-card>
+</div>

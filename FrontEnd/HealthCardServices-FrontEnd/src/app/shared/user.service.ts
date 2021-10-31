@@ -70,4 +70,16 @@ export class UserService {
     return this.http.post(this.baseURL + '/ApplicationUser/SendEmail', formData);
     console.log(formData);
   }
+
+  renewPreviousCard(formData: any)
+  {
+    return this.http.post(this.baseURL + '/ApplicationUser/RenewPreviousCard', formData);
+    console.log(formData);
+  }
+
+  cancelCard(formData: any)
+  {
+    return this.http.post(this.baseURL + '/ApplicationUser/CancelCard', formData);
+    console.log(formData);
+  }
 }

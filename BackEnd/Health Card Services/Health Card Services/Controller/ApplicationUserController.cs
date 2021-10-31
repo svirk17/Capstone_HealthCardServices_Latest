@@ -23,6 +23,7 @@ namespace Health_Card_Services.Controller
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
         private readonly ApplicationSettings _appSettings;
+       
 
         public ApplicationUserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
         {
@@ -52,7 +53,7 @@ namespace Health_Card_Services.Controller
                 Email = model.emailAddress,
                 valid = true,
                 familyNumber = rnd.Next(1, 999999),
-                personalNumber = rnd.Next(1,999999)
+                Id = rnd.Next(1,999999).ToString() //personal health number becomes the ID of the person in the database.
             };
 
             //Entering the user information into the database.
@@ -133,6 +134,60 @@ namespace Health_Card_Services.Controller
             else
             {
                 return BadRequest(new { message = "User not found." });
+            }
+        }
+
+        [HttpPost]
+        [Route("RenewPreviousCard")]
+        //POST: /api/ApplicationUser/RenewPreviousCard
+        public async Task<IActionResult> RenewPreviousCard(ApplicationUser userModel)
+        {
+            var user = await _userManager.FindByIdAsync((userModel.personalNumber).ToString());
+         
+            if (user != null) 
+            {
+                try
+                {
+                    user.valid = true;
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = "Record could not be updated." });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
+            }
+        }
+
+        [HttpPost]
+        [Route("CancelCard")]
+        //POST: /api/ApplicationUser/CancelCard
+        public async Task<IActionResult> CancelCard(ApplicationUser userModel)
+        {
+            var user = await _userManager.FindByIdAsync((userModel.personalNumber).ToString());
+
+            if (user != null)
+            {
+                try
+                {
+                    user.valid = false;
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = "Record could not be updated." });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
             }
         }
 
