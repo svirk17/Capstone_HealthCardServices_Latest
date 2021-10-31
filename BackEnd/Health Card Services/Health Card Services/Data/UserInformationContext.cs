@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Health_Card_Services.Models;
 
-/*    
+  
 public class UserInformationContext : DbContext
     {
         public UserInformationContext (DbContextOptions<UserInformationContext> options)
@@ -13,6 +13,5 @@ public class UserInformationContext : DbContext
         {
         }
 
-        public DbSet<Health_Card_Services.Models.UserInformation> UserInformation { get; set; }
+        public DbSet<Health_Card_Services.Models.UserInformationModel> UserInformation { get; set; }
     }
-*/

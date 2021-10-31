@@ -14,6 +14,10 @@ namespace Health_Card_Services.Models
         public String lastName { get; set; }
         public String address { get; set; }
         public DateTime dob { get; set; }
-        
+        public int personalNumber { get; set; }
+        public int familyNumber { get; set; }
+        public Boolean valid { get; set; }
+
+
     }
 }

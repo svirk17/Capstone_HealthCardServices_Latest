@@ -16,6 +16,9 @@ namespace Health_Card_Services.Models
         public DateTime dob { get; set; }
         public String userName { get; set; }
         public String password { get; set; }
+        public int personalNumber { get; set; }
+        public int familyNumber { get; set; }
+        public Boolean valid { get; set; }
 
     }
 }

@@ -37,6 +37,9 @@ namespace Health_Card_Services.Controller
         //POST: /api/ApplicationUser/CreateAccount
         public async Task<Object> PostUserInformation(UserInformationModel model)
         {
+            //creating the variable to generate random health card numbers.
+            Random rnd = new Random();
+
             //Retrieving the user information entered.
             var applicationUser = new ApplicationUser()
             {
@@ -45,9 +48,11 @@ namespace Health_Card_Services.Controller
                 lastName = model.lastName,
                 address = model.address,
                 dob = model.dob,
-                PhoneNumber = model.phoneNumber, 
+                PhoneNumber = model.phoneNumber,
                 Email = model.emailAddress,
-
+                valid = true,
+                familyNumber = rnd.Next(1, 999999),
+                personalNumber = rnd.Next(1,999999)
             };
 
             //Entering the user information into the database.

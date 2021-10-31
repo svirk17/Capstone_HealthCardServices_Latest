@@ -36,8 +36,8 @@ namespace Health_Card_Services
 
             services.AddRazorPages();
 
-            //services.AddDbContext<UserInformationContext>(options =>
-            //        options.UseSqlServer(Configuration.GetConnectionString("UserInformationContext")));
+           // services.AddDbContext<UserInformationContext>(options =>
+           //         options.UseSqlServer(Configuration.GetConnectionString("UserInformationContext")));
 
             services.AddDbContext<AuthenticationContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
