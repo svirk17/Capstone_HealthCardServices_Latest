@@ -23,7 +23,9 @@ namespace Health_Card_Services.Controller
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
         private readonly ApplicationSettings _appSettings;
-       
+        //creating the variable to generate random health card numbers.
+        Random rnd = new Random();
+
 
         public ApplicationUserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
         {
@@ -238,8 +240,7 @@ namespace Health_Card_Services.Controller
         //POST: /api/ApplicationUser/FirstRegistration
         public async Task<Object> FirstRegistration(ApplicationUser model)
         {
-            //creating the variable to generate random health card numbers.
-            Random rnd = new Random();
+           
 
             var user = await _userManager.FindByIdAsync((model.personalNumber).ToString());
 
@@ -267,6 +268,64 @@ namespace Health_Card_Services.Controller
                 return BadRequest(new { message = "Sorry, user could not be found." });
             }
             
+        }
+
+        [HttpPost]
+        [Route("LinkAccount")]
+        //POST: /api/ApplicationUser/UpdateAccountInfo
+        public async Task<IActionResult> LinkAccount(ApplicationUser userModel, int OtherPersonNumber)
+        {
+            var user = await _userManager.FindByIdAsync((userModel.personalNumber).ToString());
+            var relatedUser = await _userManager.FindByIdAsync(OtherPersonNumber.ToString());
+
+            if (user != null)
+            {
+                try
+                {
+                    user.familyNumber = relatedUser.familyNumber;
+                    
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = userModel.address });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
+            }
+        }
+
+        [HttpPost]
+        [Route("UnlinkAccount")]
+        //POST: /api/ApplicationUser/UpdateAccountInfo
+        public async Task<IActionResult> UnlinkAccount(ApplicationUser userModel)
+        {
+            var user = await _userManager.FindByIdAsync((userModel.personalNumber).ToString());
+
+            if (user != null)
+            {
+                try
+                {
+                    //Assign a new family number to the user.
+                    user.familyNumber = rnd.Next(1, 999999);
+
+                    await _userManager.UpdateAsync(user);
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(new { message = userModel.address });
+                }
+
+            }
+            else
+            {
+                return BadRequest(new { message = "Sorry, user could not be found." });
+            }
         }
 
     }

@@ -14,8 +14,8 @@
     <app-buttons text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-buttons>
 </div>
 
-<div *ngIf="linkAccountButtonVisible">    
-    <app-buttons text="I want to link to a family member." (btnClick)="linkAccount()"> </app-buttons>
+<div *ngIf="linkAccountRequestButtonVisible">    
+    <app-buttons text="I want to link to a family member." (btnClick)="linkUnlinkRequest()"> </app-buttons>
 </div>
 
 <div *ngIf="previousUserButtonVisible">    
@@ -44,4 +44,18 @@
 
 <div *ngIf="updateAccountInfoFormVisible">    
     <app-update-account-info></app-update-account-info>
+</div>
+
+<div *ngIf="linkingRequestFormVisible">    
+    <app-buttons text="I want to link my account with a family member." (btnClick)="linkAccount()"> </app-buttons>
+    <br>
+    <app-buttons text="I want to unlink my account from a family member" (btnClick)="unLinkAccount()"> </app-buttons>
+</div>
+
+<div *ngIf="linkAccountFormVisible">    
+    <app-link></app-link>
+</div>
+
+<div *ngIf="unlinkAccountFormVisible">    
+    <app-unlink></app-unlink>
 </div>

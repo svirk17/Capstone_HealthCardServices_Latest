@@ -9,7 +9,8 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { LoginComponent } from './components/login/login.component';
 import { CreateNewAccountComponent } from './components/create-new-account/create-new-account.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/user.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +20,9 @@ import { RenewPreviousHealthCardComponent } from './components/renew-previous-he
 
 import { CancelHealthCardComponent } from './components/cancel-health-card/cancel-health-card.component';
 import { UpdateAccountInfoComponent } from './components/update-account-info/update-account-info.component';
+import { LinkComponent } from './components/link/link.component';
+import { UnlinkComponent } from './components/unlink/unlink.component';
+import { RecommendationComponent } from './components/recommendation/recommendation.component';
 
 
 
@@ -33,7 +37,10 @@ import { UpdateAccountInfoComponent } from './components/update-account-info/upd
     RequestNewCardComponent,
     RenewPreviousHealthCardComponent,
     CancelHealthCardComponent,
-    UpdateAccountInfoComponent,      
+    UpdateAccountInfoComponent,
+    LinkComponent,
+    UnlinkComponent,
+    RecommendationComponent,      
   ],
   imports: [
     BrowserModule,

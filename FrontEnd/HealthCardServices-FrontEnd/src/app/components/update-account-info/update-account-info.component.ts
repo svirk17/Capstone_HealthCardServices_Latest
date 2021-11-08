@@ -3,11 +3,12 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/user.service';
 import { ToastrService } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-update-account-info',
   templateUrl: './update-account-info.component.html',
-  styleUrls: ['./update-account-info.component.css']
+  styleUrls: ['./update-account-info.component.css'],
 })
 export class UpdateAccountInfoComponent implements OnInit {
 

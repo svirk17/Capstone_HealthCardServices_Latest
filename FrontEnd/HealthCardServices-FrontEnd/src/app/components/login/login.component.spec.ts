@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { ToastrModule } from 'ngx-toastr';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -8,6 +10,11 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        ToastrModule.forRoot()
+      ],
       declarations: [ LoginComponent ]
     })
     .compileComponents();
@@ -33,5 +40,11 @@ describe('LoginComponent', () => {
       expect(component.OnSubmit).toHaveBeenCalled();
     });
   }));
+
+  it('TEST a Form Group ELEMENT COUNT', () => {
+    const formElement = fixture.debugElement.nativeElement.querySelector('#form');
+    const inputElements = formElement.querySelectorAll('input');
+    expect (inputElements.length).toEqual(2);
+  });
 
 });

@@ -96,4 +96,18 @@ export class UserService {
     return this.http.post(this.baseURL + '/ApplicationUser/FirstRegistration', formData);
     
   }
+
+  linkAccount(formData: any, OtherPersonNumber: any)
+  {
+    console.log(formData);
+    return this.http.post(this.baseURL + '/ApplicationUser/LinkAccount', formData,  OtherPersonNumber);
+    
+  }
+
+  UnlinkAccount(formData: any)
+  {
+    console.log(formData);
+    return this.http.post(this.baseURL + '/ApplicationUser/UnlinkAccount', formData);
+    
+  }
 }

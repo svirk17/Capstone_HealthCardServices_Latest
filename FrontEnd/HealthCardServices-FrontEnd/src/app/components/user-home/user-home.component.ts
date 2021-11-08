@@ -11,7 +11,7 @@ export class UserHomeComponent implements OnInit {
 
   requestNewHealthCardButtonVisible = true;
   updateAccountInfoButtonVisible = true;
-  linkAccountButtonVisible = true;
+  linkAccountRequestButtonVisible = true;
   previousUserButtonVisible = false;
   firstTimeUserButtonVisible = false;
   firstTimeUserFormVisible = false;
@@ -19,6 +19,9 @@ export class UserHomeComponent implements OnInit {
   cancelCardButtonVisible = true;
   cancelCardFormVisible = false;
   updateAccountInfoFormVisible = false;
+  linkingRequestFormVisible = false;
+  linkAccountFormVisible = false;
+  unlinkAccountFormVisible = false;
 
   ngOnInit(): void {
   }
@@ -27,7 +30,7 @@ export class UserHomeComponent implements OnInit {
   {
     this.requestNewHealthCardButtonVisible = false;
     this.updateAccountInfoButtonVisible = false;
-    this.linkAccountButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
     this.previousUserButtonVisible = true;
     this.firstTimeUserButtonVisible = true;
     this.firstTimeUserFormVisible = false;
@@ -35,13 +38,16 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
     this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
   }
 
   updateAccountInfo() 
   {
     this.requestNewHealthCardButtonVisible = false;
     this.updateAccountInfoButtonVisible = false;
-    this.linkAccountButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
     this.previousUserButtonVisible = false;
     this.firstTimeUserButtonVisible = false;
     this.firstTimeUserFormVisible = false;
@@ -49,18 +55,67 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
     this.updateAccountInfoFormVisible = true;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
+  }
+
+  linkUnlinkRequest()
+  {
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = true;
   }
 
   linkAccount()
   {
-    
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = true;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
+  }
+
+  unLinkAccount()
+  {
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = true;
+    this.linkingRequestFormVisible = false;
   }
 
   previousUser()
   {
     this.requestNewHealthCardButtonVisible = false;
     this.updateAccountInfoButtonVisible = false;
-    this.linkAccountButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
     this.previousUserButtonVisible = false;
     this.firstTimeUserButtonVisible = false;
     this.firstTimeUserFormVisible = false;
@@ -68,13 +123,16 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
     this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
   }
 
   firstTimeUser()
   {
     this.requestNewHealthCardButtonVisible = false;
     this.updateAccountInfoButtonVisible = false;
-    this.linkAccountButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
     this.previousUserButtonVisible = false;
     this.firstTimeUserButtonVisible = false;
     this.firstTimeUserFormVisible = true;
@@ -82,13 +140,16 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = false;
     this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
   }
 
   cancelCard()
   {
     this.requestNewHealthCardButtonVisible = false;
     this.updateAccountInfoButtonVisible = false;
-    this.linkAccountButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
     this.previousUserButtonVisible = false;
     this.firstTimeUserButtonVisible = false;
     this.firstTimeUserFormVisible = false;
@@ -96,13 +157,16 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = false;
     this.cancelCardFormVisible = true;
     this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
   }
 
   back()
   {
     this.requestNewHealthCardButtonVisible = true;
     this.updateAccountInfoButtonVisible = true;
-    this.linkAccountButtonVisible = true;
+    this.linkAccountRequestButtonVisible = true;
     this.previousUserButtonVisible = false;
     this.firstTimeUserButtonVisible = false;
     this.firstTimeUserFormVisible = false;
@@ -110,6 +174,9 @@ export class UserHomeComponent implements OnInit {
     this.cancelCardButtonVisible = true;
     this.cancelCardFormVisible = false;
     this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
   }
 
 }

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { UserHomeComponent } from './user-home.component';
 
 describe('UserHomeComponent', () => {
@@ -8,6 +8,9 @@ describe('UserHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        ReactiveFormsModule
+      ],
       declarations: [ UserHomeComponent ]
     })
     .compileComponents();
