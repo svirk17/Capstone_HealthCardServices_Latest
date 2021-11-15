@@ -328,5 +328,16 @@ namespace Health_Card_Services.Controller
             }
         }
 
+        [HttpGet]
+        [Route("GetFamilyMembers")]
+        //POST: /api/ApplicationUser/UpdateAccountInfo
+        public List<String> GetFamilyMembers(int familyNumber)
+        {
+            List<String> familyMembers = new List<String>();
+            var user =  _userManager.Users.FirstOrDefault();
+            familyMembers.Add(user.firstName + " " + user.lastName);
+            return familyMembers;
+        }
+
     }
 }

@@ -22,7 +22,9 @@ export class UserService {
     Passwords : this.fb.group({
       Password :['',[Validators.required, Validators.minLength(6)]],
       ConfirmPassword :['',[Validators.required, Validators.minLength(6)]]
-    }, {validator : this.comparePasswords})
+    }, {validator : this.comparePasswords}),
+    PersonalHealthNumber :['', Validators.required],
+    FamilyHealthNumber :['', Validators.required]
   });
 
   comparePasswords(fb:FormGroup)
@@ -86,6 +88,7 @@ export class UserService {
   updateAccountInfo(formData: any)
   {
     console.log(formData);
+  
     return this.http.post(this.baseURL + '/ApplicationUser/UpdateAccountInfo', formData);
     
   }
@@ -109,5 +112,11 @@ export class UserService {
     console.log(formData);
     return this.http.post(this.baseURL + '/ApplicationUser/UnlinkAccount', formData);
     
+  }
+
+  getFamilyMembers()
+  {
+    FamilyHealthNumber: this.formModel.value.FamilyHealthNumber;
+    return this.http.post(this.baseURL + '/ApplicationUser/GetFamilyMembers', FamilyHealthNumber);
   }
 }

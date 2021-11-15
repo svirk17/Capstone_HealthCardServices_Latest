@@ -22,6 +22,8 @@ export class UpdateAccountInfoComponent implements OnInit {
 
   constructor(public service: UserService, private toastr:ToastrService) { }
 
+  showRecommendation = false;
+
   ngOnInit(): void {
   }
 
@@ -40,6 +42,7 @@ export class UpdateAccountInfoComponent implements OnInit {
       }
       
       )
+      this.showRecommendation = true;
 }
 
 

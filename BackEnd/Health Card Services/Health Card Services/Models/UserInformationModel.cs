@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Health_Card_Services.Models
@@ -20,5 +21,9 @@ namespace Health_Card_Services.Models
         public int familyNumber { get; set; }
         public Boolean valid { get; set; }
 
+        public static implicit operator HttpContent(UserInformationModel v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
