@@ -114,9 +114,11 @@ export class UserService {
     
   }
 
+  /*
   getFamilyMembers()
   {
     FamilyHealthNumber: this.formModel.value.FamilyHealthNumber;
     return this.http.post(this.baseURL + '/ApplicationUser/GetFamilyMembers', FamilyHealthNumber);
   }
+  */
 }

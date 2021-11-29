@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CancelHealthCardComponent } from './cancel-health-card.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ToastrModule } from 'ngx-toastr';
@@ -13,6 +13,7 @@ describe('CancelHealthCardComponent', () => {
       imports: [
         ReactiveFormsModule,
         HttpClientTestingModule,
+        FormsModule,
         ToastrModule.forRoot()
       ],
       declarations: [ CancelHealthCardComponent ]

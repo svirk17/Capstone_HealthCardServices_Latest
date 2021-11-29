@@ -22,6 +22,7 @@ export class UserHomeComponent implements OnInit {
   linkingRequestFormVisible = false;
   linkAccountFormVisible = false;
   unlinkAccountFormVisible = false;
+  showRecommendation = false;
 
   ngOnInit(): void {
   }
@@ -41,6 +42,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   updateAccountInfo() 
@@ -58,6 +60,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = true;
   }
 
   linkUnlinkRequest()
@@ -75,6 +78,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = true;
+    this.showRecommendation = false;
   }
 
   linkAccount()
@@ -92,6 +96,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = true;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   unLinkAccount()
@@ -109,6 +114,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = true;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   previousUser()
@@ -126,6 +132,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   firstTimeUser()
@@ -143,6 +150,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   cancelCard()
@@ -160,6 +168,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
   back()
@@ -177,6 +186,7 @@ export class UserHomeComponent implements OnInit {
     this.linkAccountFormVisible = false;
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
   }
 
 }

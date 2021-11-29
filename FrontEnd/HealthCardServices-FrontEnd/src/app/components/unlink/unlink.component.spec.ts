@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UnlinkComponent } from './unlink.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ToastrModule } from 'ngx-toastr';
@@ -13,6 +13,7 @@ describe('UnlinkComponent', () => {
       imports: [
         ReactiveFormsModule,
         HttpClientTestingModule,
+        FormsModule,
         ToastrModule.forRoot()
       ],
       declarations: [ UnlinkComponent ]

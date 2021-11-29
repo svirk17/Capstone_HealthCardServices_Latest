@@ -23,6 +23,7 @@ import { UpdateAccountInfoComponent } from './components/update-account-info/upd
 import { LinkComponent } from './components/link/link.component';
 import { UnlinkComponent } from './components/unlink/unlink.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 
@@ -40,7 +41,8 @@ import { RecommendationComponent } from './components/recommendation/recommendat
     UpdateAccountInfoComponent,
     LinkComponent,
     UnlinkComponent,
-    RecommendationComponent,      
+    RecommendationComponent,
+    UploadFileComponent,      
   ],
   imports: [
     BrowserModule,

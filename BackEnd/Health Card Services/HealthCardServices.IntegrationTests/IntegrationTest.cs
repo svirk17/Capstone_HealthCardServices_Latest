@@ -17,35 +17,28 @@ namespace HealthCardServices.IntegrationTests
 {
     public class IntegrationTest
     {
-        public  HttpClient TestClient;
+        private readonly HttpClient TestClient;
         public IntegrationTest()
         {
-            var appFactory = new WebApplicationFactory<Startup>()
-                .WithWebHostBuilder(builder =>
-                {
-                    builder.ConfigureServices(services =>
-                    {
-                        var descriptor = services.SingleOrDefault(
-                            d => d.ServiceType ==
-                                typeof(DbContextOptions<AuthenticationContext>));
-
-                        services.Remove(descriptor);
-
-                        services.AddDbContext<AuthenticationContext>(options =>
-                        {
-                            options.UseInMemoryDatabase("TestDB");
-                        });
-                    }
-                );
-                    }
-                );
+            var appFactory = new WebApplicationFactory<Startup>(); 
             TestClient = appFactory.CreateClient();
         }
 
+        public object ApiRoutes { get; private set; }
+
+        [Fact]
+        public async Task Test1()
+        {
+            //var response = await TestClient.GetAsync(requestUri: ApiRoutes.Posts.Get.Replace(oldValue: "(postId)"), newValue: "1");
+        }
+
+        /*
         public async Task AuthenticateAsync()
         {
             TestClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", await GetJwtAsync());
         }
+        */
+        /*
 
         private async Task<string> GetJwtAsync()
         {
@@ -53,5 +46,6 @@ namespace HealthCardServices.IntegrationTests
 
             return response;
         }
+        */
     }
 }

@@ -1,5 +1,5 @@
 import { ComponentFixture, getTestBed, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateAccountInfoComponent } from './update-account-info.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ToastrModule } from 'ngx-toastr';
@@ -19,6 +19,7 @@ describe('UpdateAccountInfoComponent', () => {
       imports: [
         ReactiveFormsModule,
         HttpClientTestingModule,
+        FormsModule,
         ToastrModule.forRoot()
       ],
       declarations: [ UpdateAccountInfoComponent ]
@@ -35,6 +36,8 @@ describe('UpdateAccountInfoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  /*
 
   beforeEach(() => {  
     injector = getTestBed();

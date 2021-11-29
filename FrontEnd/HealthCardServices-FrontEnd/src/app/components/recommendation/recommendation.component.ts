@@ -13,13 +13,17 @@ import { FormsModule } from '@angular/forms';
 export class RecommendationComponent implements OnInit {
 
   constructor(public service: UserService, private toastr:ToastrService) 
-  { }
+  { 
+  }
+
+  showRecommendation = false;
 
   ngOnInit(): void {
   }
 
   OnSubmit()
   {
+    /*
     this.service.getFamilyMembers().subscribe(     
            
       (res:any) =>{   
@@ -33,6 +37,8 @@ export class RecommendationComponent implements OnInit {
       }
       
       )
+     
+     */
       this.showRecommendation = true;
   }
 

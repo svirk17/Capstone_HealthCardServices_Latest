@@ -502,3 +502,6 @@ C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackE
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\obj\Debug\net5.0\ref\HealthCardServices.IntegrationTests.dll
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\obj\Debug\net5.0\HealthCardServices.IntegrationTests.pdb
 C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\obj\Debug\net5.0\HealthCardServices.IntegrationTests.genruntimeconfig.cache
+C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\bin\Debug\net5.0\FakeItEasy.dll
+C:\Users\simvi\Desktop\Capstone Project\Capstone_HealthCardServices_Latest\BackEnd\Health Card Services\HealthCardServices.IntegrationTests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
