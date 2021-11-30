@@ -19,9 +19,11 @@ export class CreateNewAccountComponent implements OnInit {
   OnSubmit()
   {
     this.service.createAccount().subscribe(
+      
       (res:any) =>{
+        this.toastr.success('Your user account has been successfully created.');
         if(res.succeded){
-          this.toastr.success('Your user account has been successfully created.');
+          //this.toastr.success('Your user account has been successfully created.');
           this.service.formModel.reset();
         }
       },
@@ -29,7 +31,10 @@ export class CreateNewAccountComponent implements OnInit {
         console.log(err);
         //this.toastr.error('Oops! There was an error');
       }
+      
     )
+    this.showHeaderPage = true;
+    this.showForm = false;
   }
 
   Cancel()

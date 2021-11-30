@@ -23,21 +23,25 @@ body{
 }
 
 .label{
-  overflow: auto;
-  padding: 30px;
-  border-radius: 100px;
-  margin-left: 600px;
-  margin-top: 10px;
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 450px;
+
 }
 
 
 input.form-control,input.form-control:focus{
-  background-color: #a86587;
+  background-color:peachpuff;
   color: black;
   border-color: black;
   border-radius: 0px;
   border-width: 2px;
-  width: 250px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 input.form-control:focus{
@@ -46,23 +50,15 @@ input.form-control:focus{
 }
 
 .btn {
-  display: inline-block;
-  background: black;
-  color: #d6cbab;;
+  background-color:darkseagreen;
   border: none;
-  padding: 1px 1px;
-
-  margin-top: 5px;
-
-  border-radius: 5px;
-  cursor: pointer;
+  color:black;
+  padding: 15px 15px;
   text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-  align-self: center;
-  align-content: center;
-  align-items: center;
-  width: auto;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 20%;
+  margin-left: 575px;
 }
 
 .btn2 {
@@ -85,9 +81,15 @@ input.form-control:focus{
 }
 
 button[type=submit].btn{
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
+  background-color:darkseagreen;
+  border: none;
+  color:black;
+  padding: 15px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+  margin-left: 30%;
 }
 
 
@@ -107,14 +109,26 @@ padding-left: 5px;
 }
 
 form{
-  margin: 0px 16px;
+  margin-left:450px;
+  margin-top: 25px;
+  margin-right: 600px;
+  margin-bottom: auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color:honeydew;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+  border-left: 5px solid #44e613; /* green */
 }
 
 .ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+  border-left: 5px solid #d81e1b; /* red */
 }
+
 

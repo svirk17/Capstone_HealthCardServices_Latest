@@ -11,7 +11,7 @@
 </div>
 
 <div *ngIf="updateAccountInfoButtonVisible">    
-    <app-buttons class="btn btn-primary updateAccountInfo" text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-buttons>
+    <app-buttons text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-buttons>
 </div>
 
 <div *ngIf="linkAccountRequestButtonVisible">    
@@ -44,6 +44,7 @@
 
 <div *ngIf="updateAccountInfoFormVisible">    
     <app-update-account-info></app-update-account-info>
+    <br>
     <app-recommendation></app-recommendation>
 </div>
 
