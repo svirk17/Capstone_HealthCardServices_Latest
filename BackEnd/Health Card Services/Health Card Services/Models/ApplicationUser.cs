@@ -18,6 +18,9 @@ namespace Health_Card_Services.Models
         public int familyNumber { get; set; }
         public Boolean valid { get; set; }
 
+        [Column(TypeName = "varbinary")]
+        public byte[] file { get; set; }
+
 
     }
 }

@@ -12,9 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 export class RequestNewCardComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    UserName: '',
+    Id: '',
     familyNumber: '',
-    dob: '',
     address: '',
     Email: '',
     PhoneNumber: ''
@@ -27,11 +27,12 @@ export class RequestNewCardComponent implements OnInit {
 
   OnSubmit(form:NgForm)
   {
+      
       this.service.firstRegistration(form.value).subscribe(     
-           
+             
       (res:any) =>{   
         
-          this.toastr.success('Your account information has been updated.');
+          this.toastr.success('A request for your health card has been successfully received');
       },
       
       err =>{

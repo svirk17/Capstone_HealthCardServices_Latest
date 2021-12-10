@@ -9,5 +9,7 @@ namespace Health_Card_Services.Models
     {
         public String JWT_Secret { get; set; }
         public String Client_URL { get; set; }
+
+        public String Connection_String { get; set; }
     }
 }

@@ -15,6 +15,7 @@ export class AppComponent {
   displayCreateForm = false;
   LoginButtonVisible = true;
   CreateAccountButtonVisible = true;
+  showHeader = true;
 
   
 
@@ -34,6 +35,7 @@ export class AppComponent {
     this.displayLoginForm = false;
     this.LoginButtonVisible = false;
     this.CreateAccountButtonVisible = false;
+    this.showHeader = false;
   }
   
 }

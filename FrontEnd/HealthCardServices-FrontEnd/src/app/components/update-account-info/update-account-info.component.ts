@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class UpdateAccountInfoComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    Id: '',
     familyNumber: '',
     address: '',
     Email: '',
@@ -23,6 +23,7 @@ export class UpdateAccountInfoComponent implements OnInit {
   constructor(public service: UserService, private toastr:ToastrService) { }
 
   showRecommendation = false;
+  showUpdateForm = true;
 
   ngOnInit(): void {
   }
@@ -33,7 +34,7 @@ export class UpdateAccountInfoComponent implements OnInit {
            
       (res:any) =>{   
         
-          this.toastr.success('Your account information has been updated.');
+          this.toastr.success('Your account information has been updated. An email with additional details has been sent to you.');
       },
       
       err =>{
@@ -43,6 +44,7 @@ export class UpdateAccountInfoComponent implements OnInit {
       
       )
       this.showRecommendation = true;
+      this.showUpdateForm = false;
 }
 
 

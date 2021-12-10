@@ -12,10 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 export class LinkComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    Id: '',
     familyNumber: '',
     address: '',
-    familyNumber2: ''
+    personalNumber: ''
   }
 
  
@@ -29,12 +29,12 @@ export class LinkComponent implements OnInit {
 
   OnSubmit(form:NgForm)
   {
-      OtherPersonNumber: this.formModel.familyNumber2;
-      this.service.linkAccount(form.value, this.formModel.familyNumber2).subscribe(     
+      OtherPersonNumber: this.formModel.personalNumber;
+      this.service.linkAccount(form.value).subscribe(     
            
       (res:any) =>{   
         
-          this.toastr.success('Your account has been successfully linked.');
+          this.toastr.success('Your account has been successfully linked. A confirmation emal has been sent to you.');
       },
       
       (err:any) =>{

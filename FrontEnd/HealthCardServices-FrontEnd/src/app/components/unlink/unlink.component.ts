@@ -12,9 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 export class UnlinkComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    Id: '',
     familyNumber: '',
-    address: ''
+    address: '',
+    personalNumber: ''
   }
 
   constructor(public service: UserService, private toastr:ToastrService) { }
@@ -28,7 +29,7 @@ export class UnlinkComponent implements OnInit {
            
       (res:any) =>{   
         
-          this.toastr.success('Your account has been successfully linked.');
+          this.toastr.success('Your account has been successfully unlinked. An email with additional details has been sent to you.');
       },
       
       (err:any) =>{

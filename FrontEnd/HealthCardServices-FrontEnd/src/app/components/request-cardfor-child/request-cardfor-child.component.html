@@ -1,0 +1,39 @@
+<div class="form-control">
+    <div class="row mt-4">
+        <div class="col md-6">
+            <form #form='ngForm' class="mb-4" autocomplete="off" (submit)="OnSubmit(form)">
+                <label> Enter your child's details below. </label>
+                <div class="form-group" required>
+                    <label> First Name </label>
+                    <input #firstName="ngModel" name="firstName" [(ngModel)]="formModel.firstName">
+                </div>
+                <div class="form-group" required>
+                    <label> Last Name </label>
+                    <input #lastName="ngModel" name="lastName" [(ngModel)]="formModel.lastName">
+                </div>
+                <div class="form-group" required>
+                    <label> Family Health Number </label>
+                    <input #familyNumber="ngModel" name="familyNumber" [(ngModel)]="formModel.familyNumber">
+                </div>
+                <div class="form-group" required>
+                    <label> Address </label>
+                    <input #address="ngModel" name="address" [(ngModel)]="formModel.address">
+                </div>   
+                <div class="form-group" required>
+                    <label> Username </label>
+                    <input #userName="ngModel" name="userName" [(ngModel)]="formModel.userName">
+                </div> 
+                <div class="form-group" required>
+                    <label> Password </label>
+                    <input  #password="ngModel" name="password" [(ngModel)]="formModel.password">
+                </div>             
+                
+                <div class="form-row">
+                    <div class="form-group col-md-8offset-md-2">
+                        <button type="submit" class="btn btn-lg btn-blk" [disabled]='form.invalid' (submit)="OnSubmit(form)">Submit Request</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

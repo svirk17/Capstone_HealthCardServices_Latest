@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class UserService {
 
   baseURL = 'http://localhost:44309/api';
 
-  constructor(private fb:FormBuilder, private http:HttpClient) { }
+  constructor(private fb:FormBuilder, private http:HttpClient, private toastr:ToastrService) { }
 
   formModel = this.fb.group({
     UserName :['', Validators.required],
@@ -23,9 +24,11 @@ export class UserService {
       Password :['',[Validators.required, Validators.minLength(6)]],
       ConfirmPassword :['',[Validators.required, Validators.minLength(6)]]
     }, {validator : this.comparePasswords}),
-    PersonalHealthNumber :['', Validators.required],
+    Id :['', Validators.required],
     FamilyHealthNumber :['', Validators.required]
   });
+
+  familyNumber4Recommendation = '';
 
   comparePasswords(fb:FormGroup)
   {
@@ -58,7 +61,12 @@ export class UserService {
       Password: this.formModel.value.Passwords.Password
     }
 
-    return this.http.post(this.baseURL + '/ApplicationUser/Register/', body);
+    return this.http.post(this.baseURL + '/ApplicationUser/Register', body);
+  }
+
+  createChildAccount(formData: any)
+  {
+    return this.http.post(this.baseURL + '/ApplicationUser/Register', formData);
   }
 
   login(formData: any)
@@ -88,9 +96,8 @@ export class UserService {
   updateAccountInfo(formData: any)
   {
     console.log(formData);
-  
-    return this.http.post(this.baseURL + '/ApplicationUser/UpdateAccountInfo', formData);
-    
+    this.familyNumber4Recommendation = formData.familyNumber;
+    return this.http.post(this.baseURL + '/ApplicationUser/UpdateAccountInfo', formData);    
   }
 
   firstRegistration(formData: any)
@@ -100,25 +107,22 @@ export class UserService {
     
   }
 
-  linkAccount(formData: any, OtherPersonNumber: any)
+  linkAccount(formData: any)
   {
     console.log(formData);
-    return this.http.post(this.baseURL + '/ApplicationUser/LinkAccount', formData,  OtherPersonNumber);
-    
+    return this.http.post(this.baseURL + '/ApplicationUser/LinkAccount', formData);    
   }
 
   UnlinkAccount(formData: any)
   {
     console.log(formData);
-    return this.http.post(this.baseURL + '/ApplicationUser/UnlinkAccount', formData);
-    
+    return this.http.post(this.baseURL + '/ApplicationUser/UnlinkAccount', formData);    
   }
 
-  /*
-  getFamilyMembers()
+
+  getRecommendation()
   {
-    FamilyHealthNumber: this.formModel.value.FamilyHealthNumber;
-    return this.http.post(this.baseURL + '/ApplicationUser/GetFamilyMembers', FamilyHealthNumber);
+    return this.http.post(this.baseURL + '/ApplicationUser/GetRecommendation', this.familyNumber4Recommendation);
   }
-  */
+
 }

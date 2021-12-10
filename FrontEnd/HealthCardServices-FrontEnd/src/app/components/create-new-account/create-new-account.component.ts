@@ -11,6 +11,7 @@ export class CreateNewAccountComponent implements OnInit {
 
   showForm = true;
   showHeaderPage = false;
+
   constructor(public service: UserService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
@@ -19,23 +20,21 @@ export class CreateNewAccountComponent implements OnInit {
   OnSubmit()
   {
     this.service.createAccount().subscribe(
-      
       (res:any) =>{
-        this.toastr.success('Your user account has been successfully created.');
-        if(res.succeded){
-          //this.toastr.success('Your user account has been successfully created.');
-          this.service.formModel.reset();
-        }
+        //this.toastr.success("Your Health Card Services account has been successfully created");
+        this.service.formModel.reset();
       },
       err =>{
         console.log(err);
-        //this.toastr.error('Oops! There was an error');
       }
       
     )
+    
+    this.toastr.success("Your Health Card Services account has been successfully created");
     this.showHeaderPage = true;
     this.showForm = false;
   }
+
 
   Cancel()
   {
@@ -44,3 +43,4 @@ export class CreateNewAccountComponent implements OnInit {
   }
 
 }
+

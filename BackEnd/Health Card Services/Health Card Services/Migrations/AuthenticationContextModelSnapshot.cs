@@ -238,6 +238,9 @@ namespace Health_Card_Services.Migrations
                     b.Property<int>("familyNumber")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("file")
+                        .HasColumnType("varbinary");
+
                     b.Property<string>("firstName")
                         .HasColumnType("nvarchar(150)");
 

@@ -16,30 +16,24 @@ export class RecommendationComponent implements OnInit {
   { 
   }
 
-  showRecommendation = false;
+  recommendation = '';
 
   ngOnInit(): void {
   }
 
   OnSubmit()
   {
-    /*
-    this.service.getFamilyMembers().subscribe(     
+    this.service.getRecommendation().subscribe(     
            
-      (res:any) =>{   
+    (response)=>{
+        this.recommendation = response.valueOf.toString();
+    },
+    err =>{
         
-          this.toastr.success('Your account information has been updated.');
-      },
+      this.toastr.error('Oops! There was an error. Please try again.');
+    }
+    );
       
-      err =>{
-        
-        this.toastr.error('Oops! There was an error. Please try again.');
-      }
-      
-      )
-     
-     */
-      this.showRecommendation = true;
   }
 
 }

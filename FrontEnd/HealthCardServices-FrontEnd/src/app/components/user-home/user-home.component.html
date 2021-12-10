@@ -1,29 +1,36 @@
 <div>
-    <h4>Welcome User!</h4> <app-buttons text="Back to services" (btnClick)="back()"> </app-buttons>
+<div *ngIf="logOutRequested == false">
+    <app-buttons type="button1" text="Back to services" (btnClick)="back()"> </app-buttons>
+    <app-buttons type="button2" text="Log Out" (btnClick)="logOut()"> </app-buttons>
 </div>
 
-<p> </p>
-<br> <br> <br> <br> 
-
+<div *ngIf="logOutRequested == false"
+>
+    <app-upload-file></app-upload-file>
+</div>
 
 <div *ngIf="requestNewHealthCardButtonVisible">    
-    <app-buttons text="I want to request a new health card." (btnClick)="requestNewHealthCard()"> </app-buttons>
+    <app-option-buttons text="I want to request a new health card." (btnClick)="requestNewHealthCard()"> </app-option-buttons>
 </div>
 
 <div *ngIf="updateAccountInfoButtonVisible">    
-    <app-buttons text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-buttons>
+    <app-option-buttons text="I want to update my account info." (btnClick)="updateAccountInfo()"> </app-option-buttons>
 </div>
 
 <div *ngIf="linkAccountRequestButtonVisible">    
-    <app-buttons text="I want to link to a family member." (btnClick)="linkUnlinkRequest()"> </app-buttons>
+    <app-option-buttons text="I want to unlink/link with a family member." (btnClick)="linkUnlinkRequest()"> </app-option-buttons>
 </div>
 
 <div *ngIf="previousUserButtonVisible">    
-    <app-buttons text="I have had a health card previously." (btnClick)="previousUser()"> </app-buttons>
+    <app-option-buttons text="I have had a health card previously." (btnClick)="previousUser()"> </app-option-buttons>
 </div>
 
 <div *ngIf="firstTimeUserButtonVisible">    
-    <app-buttons text="I am applying for a health card for the first time." (btnClick)="firstTimeUser()"> </app-buttons>
+    <app-option-buttons text="I am applying for a health card for the first time." (btnClick)="firstTimeUser()"> </app-option-buttons>
+</div>
+
+<div *ngIf="requestCardForChild">    
+    <app-option-buttons text="I am applying for a health card for my child." (btnClick)="applyForChild()"> </app-option-buttons>
 </div>
 
 <div *ngIf="firstTimeUserFormVisible">    
@@ -35,7 +42,7 @@
 </div>
 
 <div *ngIf="cancelCardButtonVisible">    
-    <app-buttons text="I want to cancel my health card." (btnClick)="cancelCard()"> </app-buttons>
+    <app-option-buttons text="I want to cancel my health card." (btnClick)="cancelCard()"> </app-option-buttons>
 </div>
 
 <div *ngIf="cancelCardFormVisible">    
@@ -43,15 +50,13 @@
 </div>
 
 <div *ngIf="updateAccountInfoFormVisible">    
-    <app-update-account-info></app-update-account-info>
-    <br>
-    <app-recommendation></app-recommendation>
+    <app-update-account-info></app-update-account-info>    
 </div>
 
 <div *ngIf="linkingRequestFormVisible">    
-    <app-buttons text="I want to link my account with a family member." (btnClick)="linkAccount()"> </app-buttons>
+    <app-option-buttons text="I want to link my account with a family member." (btnClick)="linkAccount()"> </app-option-buttons>
     <br>
-    <app-buttons text="I want to unlink my account from a family member" (btnClick)="unLinkAccount()"> </app-buttons>
+    <app-option-buttons text="I want to unlink my account from a family member" (btnClick)="unLinkAccount()"> </app-option-buttons>
 </div>
 
 <div *ngIf="linkAccountFormVisible">    
@@ -60,4 +65,13 @@
 
 <div *ngIf="unlinkAccountFormVisible">    
     <app-unlink></app-unlink>
+</div>
+
+<div *ngIf="showChildApplication">    
+    <app-request-cardfor-child></app-request-cardfor-child>
+</div>
+
+<div *ngIf="logOutRequested">    
+    <app-root></app-root>
+</div>
 </div>

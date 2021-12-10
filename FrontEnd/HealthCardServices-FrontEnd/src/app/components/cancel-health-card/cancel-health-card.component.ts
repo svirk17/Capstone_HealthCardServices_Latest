@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class CancelHealthCardComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    Id: '',
     familyNumber: ''
   }
 
@@ -27,7 +27,7 @@ export class CancelHealthCardComponent implements OnInit {
            
       (res:any) =>{   
         
-          this.toastr.success('Your card is now invalid for use.');
+          this.toastr.success('Your card is now invalid/inactive for use. A confirmation email has been sent to you.');
       },
       err =>{
         

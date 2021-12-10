@@ -23,6 +23,9 @@ export class UserHomeComponent implements OnInit {
   linkAccountFormVisible = false;
   unlinkAccountFormVisible = false;
   showRecommendation = false;
+  requestCardForChild = false;
+  showChildApplication = false;
+  logOutRequested = false;
 
   ngOnInit(): void {
   }
@@ -43,6 +46,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = true;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   updateAccountInfo() 
@@ -61,6 +67,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = true;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   linkUnlinkRequest()
@@ -79,6 +88,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = true;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   linkAccount()
@@ -97,6 +109,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   unLinkAccount()
@@ -115,6 +130,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = true;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   previousUser()
@@ -133,6 +151,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   firstTimeUser()
@@ -151,6 +172,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   cancelCard()
@@ -169,6 +193,9 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
   }
 
   back()
@@ -187,6 +214,51 @@ export class UserHomeComponent implements OnInit {
     this.unlinkAccountFormVisible = false;
     this.linkingRequestFormVisible = false;
     this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = false;
+  }
+
+  applyForChild()
+  {
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = true;
+    this.logOutRequested = false;
+  }
+
+  logOut()
+  {
+    this.requestNewHealthCardButtonVisible = false;
+    this.updateAccountInfoButtonVisible = false;
+    this.linkAccountRequestButtonVisible = false;
+    this.previousUserButtonVisible = false;
+    this.firstTimeUserButtonVisible = false;
+    this.firstTimeUserFormVisible = false;
+    this.previousUserFormVisible = false;
+    this.cancelCardButtonVisible = false;
+    this.cancelCardFormVisible = false;
+    this.updateAccountInfoFormVisible = false;
+    this.linkAccountFormVisible = false;
+    this.unlinkAccountFormVisible = false;
+    this.linkingRequestFormVisible = false;
+    this.showRecommendation = false;
+    this.requestCardForChild = false;
+    this.showChildApplication = false;
+    this.logOutRequested = true;
   }
 
 }

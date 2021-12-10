@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Health Card Services\\bin",
-    "\\Health Card Services\\obj\\Debug",
-    "\\Health Card Services\\obj\\Debug\\net5.0",
-    "\\Health Card Services\\obj\\Debug\\net5.0\\Razor\\Pages",
-    "\\Health Card Services\\obj\\Debug\\net5.0\\ref",
-    "\\Health Card Services\\obj\\Debug\\net5.0\\staticwebassets",
-    "\\Health Card Services\\Properties",
-    "\\Health Card Services\\wwwroot",
-    "\\Health Card Services\\wwwroot\\lib"
+    "\\HealthCardServices.IntegrationTests"
   ],
   "SelectedNode": "\\Health Card Services.sln",
   "PreviewInSolutionExplorer": false

@@ -34,6 +34,7 @@
       "HealthCardServices.IntegrationTests/1.0.0": {
         "dependencies": {
           "FakeItEasy": "7.2.0",
+          "MSTest.TestFramework": "2.2.8",
           "Microsoft.AspNetCore.Mvc.Testing": "5.0.1",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.18",
           "Microsoft.NET.Test.Sdk": "16.9.4",
@@ -188,7 +189,7 @@
           "System.Diagnostics.FileVersionInfo": "5.0.0.0",
           "System.Diagnostics.Process": "5.0.0.0",
           "System.Diagnostics.StackTrace": "5.0.0.0",
-          "System.Diagnostics.TextWriterTraceListener": "5.0.0.0",
+          "System.Diagnostics.TextWriterTraceListener.Reference": "5.0.0.0",
           "System.Diagnostics.Tools.Reference": "5.0.0.0",
           "System.Diagnostics.TraceSource.Reference": "5.0.0.0",
           "System.Diagnostics.Tracing.Reference": "5.0.0.0",
@@ -1746,6 +1747,26 @@
           "Microsoft.NETCore.Platforms": "5.0.0"
         }
       },
+      "MSTest.TestFramework/2.2.8": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.TextWriterTraceListener": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.6623.13"
+          },
+          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.6623.13"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {},
+          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -2120,6 +2141,16 @@
           "Microsoft.NETCore.Platforms": "5.0.0",
           "Microsoft.Win32.Registry": "5.0.0",
           "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "System.Diagnostics.TextWriterTraceListener/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
         }
       },
       "System.Diagnostics.Tools/4.3.0": {
@@ -3829,7 +3860,7 @@
         },
         "compileOnly": true
       },
-      "System.Diagnostics.TextWriterTraceListener/5.0.0.0": {
+      "System.Diagnostics.TextWriterTraceListener.Reference/5.0.0.0": {
         "compile": {
           "System.Diagnostics.TextWriterTraceListener.dll": {}
         },
@@ -5236,6 +5267,13 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "MSTest.TestFramework/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-phUoHuGTuw9T5yekxPHLLLq8jE56yufmh2yPlJq1IfkT4a3tYZ2htkeTlnQmzmJP3hI5xYhlqwiHcy3JqVt/OA==",
+      "path": "mstest.testframework/2.2.8",
+      "hashPath": "mstest.testframework.2.2.8.nupkg.sha512"
+    },
     "NETStandard.Library/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -5522,6 +5560,13 @@
       "sha512": "sha512-FHkCwUfsTs+/5tsK+c0egLfacUgbhvcwi3wUFWSEEArSXao343mYqcpOVVFMlcCkdNtjU4YwAWaKYwal6f02og==",
       "path": "system.diagnostics.eventlog/5.0.0",
       "hashPath": "system.diagnostics.eventlog.5.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.TextWriterTraceListener/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F11kHWeiwYjFWto+kr8tt9ULMH0k8MsT1XmdCGPTLYHhWgN+2g7JsIZiXDrxlFGccSNkbjfwQy4xIS38gzUiZA==",
+      "path": "system.diagnostics.textwritertracelistener/4.3.0",
+      "hashPath": "system.diagnostics.textwritertracelistener.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Tools/4.3.0": {
       "type": "package",
@@ -6821,7 +6866,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Diagnostics.TextWriterTraceListener/5.0.0.0": {
+    "System.Diagnostics.TextWriterTraceListener.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

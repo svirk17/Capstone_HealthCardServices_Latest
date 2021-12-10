@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
         //this.router.navigateByUrl('user');  
         this.successfulLogin = true;   
         this.displayLoginForm = false;
+
+        /*
         //Send email to user
         this.service.SendEmail(form.value).subscribe(
           (res:any)=>{
@@ -42,6 +44,7 @@ export class LoginComponent implements OnInit {
              console.log(err);
            }
          )
+         */
       },
       err => {
         if (err.status == 400)

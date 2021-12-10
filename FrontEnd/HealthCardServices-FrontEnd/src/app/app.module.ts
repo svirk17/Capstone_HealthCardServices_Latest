@@ -24,6 +24,9 @@ import { LinkComponent } from './components/link/link.component';
 import { UnlinkComponent } from './components/unlink/unlink.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { OptionButtonsComponent } from './components/option-buttons/option-buttons.component';
+import { RequestCardforChildComponent } from './components/request-cardfor-child/request-cardfor-child.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -42,7 +45,9 @@ import { UploadFileComponent } from './components/upload-file/upload-file.compon
     LinkComponent,
     UnlinkComponent,
     RecommendationComponent,
-    UploadFileComponent,      
+    UploadFileComponent,
+    OptionButtonsComponent,
+    RequestCardforChildComponent,      
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { UploadFileComponent } from './components/upload-file/upload-file.compon
     ToastrModule.forRoot({
       progressBar: true
     }),
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DUBFl78v/Dq2prSeGfzGPd2jX1oDvmS0hULNr9ySJqwylDs+XTTguPQUhGszQpZKxtUH/7h6iVtGRoFhMkbxJA==",
+  "dgSpecHash": "CqXnqqMpunQmlMLn9xLyOgfIAGG2Rb/KlMLfYQvxMhA0o5A1rUEdOcLvAV71mFD+2HBRpU4THdHScqLtBklBWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\simvi\\Desktop\\Capstone Project\\Capstone_HealthCardServices_Latest\\BackEnd\\Health Card Services\\HealthCardServices.IntegrationTests\\HealthCardServices.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -95,6 +95,7 @@
     "C:\\Users\\simvi\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\simvi\\.nuget\\packages\\mstest.testframework\\2.2.8\\mstest.testframework.2.2.8.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
@@ -136,6 +137,7 @@
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.eventlog\\5.0.0\\system.diagnostics.eventlog.5.0.0.nupkg.sha512",
+    "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.textwritertracelistener\\4.3.0\\system.diagnostics.textwritertracelistener.4.3.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
     "C:\\Users\\simvi\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",

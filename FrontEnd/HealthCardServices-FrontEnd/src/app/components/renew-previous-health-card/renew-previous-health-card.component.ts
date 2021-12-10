@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class RenewPreviousHealthCardComponent implements OnInit {
 
   formModel = {
-    personalNumber: '',
+    Id: '',
     familyNumber: ''
   }
 
@@ -29,7 +29,7 @@ export class RenewPreviousHealthCardComponent implements OnInit {
            
       (res:any) =>{   
         
-          this.toastr.success('Your user account has been successfully activated. A new card will be mailed to you in 2 weeks.');
+          this.toastr.success('Your user account has been successfully activated. An email with additional details has been sent to you.');
       },
       err =>{
         
